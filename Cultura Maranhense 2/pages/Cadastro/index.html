@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../../assets/favicon.ico">
+	<link rel="stylesheet" href="styles.css" />
+	<title>Cultura Maranhense - Newsletter</title>
+</head>
+
+<body>
+	<div class="content">
+		<header><img src="../../assets/sao-luis.jpg" /></header>
+		<!-- Navbar com 3 links: de "inicio" que navega para a pagina de Inico na seção do texto sobre cultura,
+        "A magia do São João do MA" que redireciona para o video no fim da pagina de Inicio, e o link de "newsletter" 
+			que é a pagina atual -->
+		<nav id="navbar">
+			<ul aria-labelledby="navbar">
+				<li><a href="../Inicio/index.html">Home</a></li>
+				<li><a href="../Inicio/index.html#video-container">A magia do São João do MA</a></li>
+				<li><a href="../Cadastro/index.html">Newsletter</a></li>
+			</ul>
+		</nav>
+
+		<article id="home">
+			<!-- Section de Cadastro a newsletter do cultura maranhense -->
+			<section id="cadastro">
+				<h1>Newsletter</h1>
+				<h3>Preencha os campos para receber as notícias do Cultura Maranhense.</h3>
+				<form aria-labelledby="cadastro" id="formElem" name="formElem">
+					<!-- onsubmit="requisicao()" -->
+					<!-- Campos do cadastro -->
+					<label for="name" aria-label="Nome">Nome Completo*</label>
+					<input type="text" aria-label="name" placeholder="Digite seu nome completo" id="name" required>
+
+					<label for="email">Email*</label>
+					<input type="email" placeholder="Digite seu email" id="email" required>
+
+					<label for="tel">Telefone*</label>
+					<input type="tel" name="tel" placeholder="(__) _____-____" maxlength="11" required>
+
+					<div class="buttons">
+
+						<button aria-label="Cancelar" type="reset" class="cancelar">Cancelar</button>
+
+						<!-- A função de validação do telefone é chamada no momento do clique no botao de cadastrar -->
+						<button aria-label="Cadastrar" type="submit" onclick="alert('Enviado!')">Cadastrar</button>
+					</div>
+				</form>
+			</section>
+			<!-- 
+			Section com uma galeria de fotos, funcionando como um slider,
+			 utilizando uma pequena função js para adicionar e remover o nome 
+			 de classe ativa e acionar o css -->
+			<h1>Galeria de imagens</h1>
+			<section id="galeria" aria-label="Galeria de imagens contendo varios pontos turisticos do maranhao">
+				<div class="container">
+
+					<div aria-label="Centro Histórico de São Luis" class="panel active" style="
+					background-image: url('https://www.vidadeturista.com/wp-content/uploads/2011/09/aniversario-sao-luis-399-anos.jpg');
+					">
+
+						<h3>Centro Histórico de São Luis</h3>
+					</div>
+					<div aria-label="São José de Ribamar" class="panel" style="
+                background-image: url('https://1.bp.blogspot.com/-DqU1muk-KA0/YS59aerKBfI/AAAAAAABYtw/Sf3xBPNpWzM4P-HfBn3Ap7MYyDO_eZ4mQCLcBGAsYHQ/s2048/DJI_0595a%2B%25281%2529.jpg');
+            ">
+						<h3>São José de Ribamar</h3>
+					</div>
+
+					<div aria-label="Lençóis Maranhenses" class="panel" style="
+                background-image: url('https://magazine.zarpo.com.br/wp-content/uploads/2021/05/oq-fazer-no-maranhao_zarpo.jpg');
+            ">
+						<h3>Lençóis Maranhenses</h3>
+					</div>
+
+					<div aria-label="Chapada das Mesas" class="panel" style="
+                background-image: url('https://i2.wp.com/documentodeviagem.com/wp-content/uploads/2019/10/portal-da-chapada-das-mesas-documento-de-viagem-10-1024x683_edited.jpg?fit=800%2C534&ssl=1&resize=1280%2C720');
+            ">
+						<h3>Chapada das Mesas</h3>
+					</div>
+
+					<div aria-label="Alcântara" class="panel" style="
+                background-image: url(' https://guiaviajarmelhor.com.br/wp-content/uploads/2019/04/NE_Alcantara0071.jpg');
+            ">
+						<h3>Alcântara</h3>
+					</div>
+				</div>
+
+
+				<!-- Section de um google maps incorporado com o centro de São Luis -->
+				<section id="map">
+					<h3>Venha para o Maranhão!</h3>
+					<div class="mapouter">
+						<div class="gmap_canvas">
+							<iframe aria-label="Mapa do google apontando para o centro de São Luis" class="gmap_iframe"
+								frameborder="0" scrolling="no"
+								src="https://maps.google.com/maps?width=600&amp;height=300&amp;hl=en&amp;q=São Luis&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+							</iframe>
+						</div>
+
+					</div>
+				</section>
+		</article>
+	</div>
+	<!-- Footer do site -->
+	<footer aria-label="footer da pagina">
+		<p>
+			Site desenvolvido para o Desafio da Trilha de Programação 2021<br />
+			Desenvolvido por: Thiago Angelo Oliveira
+		</p>
+	</footer>
+
+	<script src="./scripts.js"></script>
+</body>
+
+</html>
